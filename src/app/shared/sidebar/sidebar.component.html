@@ -25,25 +25,20 @@
             <div class="navbar-vertical-content">
                 <ul class="navbar-nav navbar-nav-lg nav-tabs">
                     <!-- Dashboards -->
-                    <li class="navbar-vertical-aside-has-menu show">
+                    <li *ngFor="let item of menuItems" class="navbar-vertical-aside-has-menu show">
                         <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle active" href="javascript:;" title="Dashboards">
                             <i class="tio-home-vs-1-outlined nav-icon"></i>
-                            <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Dashboards</span>
+                            <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">{{ item.titulo }}</span>
                         </a>
 
                         <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="./index.html" title="Default">
+                            <li *ngFor="let subMenuItem of item.submenu" class="nav-item">
+                                <a class="nav-link active" [routerLink]="subMenuItem.url" title="Default">
                                     <span class="tio-circle nav-indicator-icon"></span>
-                                    <span class="text-truncate">Default</span>
+                                    <span class="text-truncate">{{subMenuItem.titulo}}</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link " href="./dashboard-alternative.html" title="Alternative">
-                                    <span class="tio-circle nav-indicator-icon"></span>
-                                    <span class="text-truncate">Alternative</span>
-                                </a>
-                            </li>
+
                         </ul>
                     </li>
                     <!-- End Dashboards -->
@@ -137,7 +132,7 @@
 
                                 <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
                                     <li class="nav-item">
-                                        <a class="nav-link " href="./account-settings.html" title="Settings">
+                                        <a class="nav-link " routerLink="/dashboard/account-settings" title="Settings">
                                             <span class="tio-circle-outlined nav-indicator-icon"></span>
                                             <span class="text-truncate">Settings</span>
                                         </a>
