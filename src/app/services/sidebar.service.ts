@@ -11,8 +11,10 @@ export class SidebarService {
       icono: 'tio-home-vs-1-outlined',
       submenu: [
         { titulo: 'Main', url: '/'},
-        { titulo: 'ProgressBar', url: 'progress'},
         { titulo: 'Graficas', url: 'grafica1'},
+        { titulo: 'Promesas', url: 'promesas'},
+        { titulo: 'ProgressBar', url: 'progress'},
+        { titulo: 'Rxjs', url: 'rxjs'},
       ]
     }
   ];

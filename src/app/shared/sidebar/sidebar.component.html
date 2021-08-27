@@ -33,7 +33,7 @@
 
                         <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
                             <li *ngFor="let subMenuItem of item.submenu" class="nav-item">
-                                <a class="nav-link active" [routerLink]="subMenuItem.url" title="Default">
+                                <a class="nav-link active" [routerLink]="subMenuItem.url" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" title="Default">
                                     <span class="tio-circle nav-indicator-icon"></span>
                                     <span class="text-truncate">{{subMenuItem.titulo}}</span>
                                 </a>
