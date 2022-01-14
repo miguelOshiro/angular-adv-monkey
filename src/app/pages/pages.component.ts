@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SettingsService } from '../services/settings.service';
 
-//declare function themeInitFuctions();
+//declare function themeInitFuctions(); --instncia themeInitFuction (Global)
 
 @Component({
   selector: 'app-pages',
@@ -17,7 +17,7 @@ export class PagesComponent implements OnInit {
 
   ngOnInit(): void {
 
-    //themeInitFuctions();
+    //themeInitFuctions(); --global
   }
 
 }
