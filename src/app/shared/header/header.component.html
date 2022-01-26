@@ -664,20 +664,21 @@
                  "type": "css-animation"
                }'>
                             <div class="avatar avatar-sm avatar-circle">
-                                <img class="avatar-img" src="./assets/img/160x160/img6.jpg" alt="Image Description">
+                                <img class="avatar-img" [src]="usuario.imagenUrl" alt="Image Description">
                                 <span class="avatar-status avatar-sm-status avatar-status-success"></span>
                             </div>
                         </a>
-
+                        <!-- Account imagen 676 -->
                         <div id="accountNavbarDropdown" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right navbar-dropdown-menu navbar-dropdown-account" style="width: 16rem;">
                             <div class="dropdown-item-text">
                                 <div class="media align-items-center">
                                     <div class="avatar avatar-sm avatar-circle mr-2">
-                                        <img class="avatar-img" src="./assets/img/160x160/img6.jpg" alt="Image Description">
+                                        <img class="avatar-img" [src]="usuario.imagenUrl" alt="Image Description">
                                     </div>
                                     <div class="media-body">
-                                        <span class="card-title h5">Mark Williams</span>
-                                        <span class="card-text">mark@example.com</span>
+                                        <span class="card-title h5">{{usuario.nombre}}</span>
+                                        <span class="card-text">{{ usuario.email | slice:0:20 }}{{ (usuario.email.length > 20) ? '...': '' }}
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -715,7 +716,7 @@
                             </div>
                             <!-- End Unfold -->
 
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" routerLink="./perfil">
                                 <span class="text-truncate pr-2" title="Profile &amp; account">Profile &amp; account</span>
                             </a>
 
