@@ -1,0 +1,67 @@
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<div class="fondo-modal-imagen animated fadeIn fast" [class.oculto]="modalImagenService.ocultarModal">
+    <!-- Modal -->
+    <div class="modal fade show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: block;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cargar imagen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="cerrarModal()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+                </div>
+                <div class="modal-body">
+
+                    <h3>Seleccione una imagen</h3>
+                    <div class="text-center">
+                        <img *ngIf="!imgTemp" [src]="modalImagenService.img" class="img-avatar">
+                        <img *ngIf="imgTemp" [src]="imgTemp" class="img-avatar">
+
+                    </div>
+
+                    <input type="file" (change)="cambiarImagen($any( $event).target.files[0] )">
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cerrarModal()">Close</button>
+                    <button type="button" class="btn btn-primary" (click)="subirImagen()">Actualizar foto</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button> -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cargar imagen</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+          </div>
+          <div class="modal-body">
+
+              <h3>Seleccione una imagen</h3>
+
+
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Actualizar foto</button>
+          </div>
+      </div>
+  </div>
+</div> -->

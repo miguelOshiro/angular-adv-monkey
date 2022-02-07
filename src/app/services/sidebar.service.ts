@@ -16,8 +16,30 @@ export class SidebarService {
         { titulo: 'ProgressBar', url: 'progress'},
         { titulo: 'Rxjs', url: 'rxjs'},
       ]
-    }
+    },
+
+    {
+      titulo: 'Mantenimiento',
+      icono: 'tio-dashboard-vs-outlined',
+      submenu: [
+        { titulo: 'Usuarios', url: 'usuarios'},
+        { titulo: 'Hospitales', url: 'hospitales'},
+        { titulo: 'Medicos', url: 'medicos'},
+      ]
+    },
   ];
 
   constructor() { }
 }
+
+
+//tio-apps
+//tio-lock-outlined
+//tio-visible-outlined
+//tio-dashboard-vs-outlined
+//tio-book-opened
+//tio-home-vs-1-outlined
+//tio-command-key
+//tio-alt
+//tio-gift
+//tio-chat-outlined

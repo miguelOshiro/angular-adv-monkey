@@ -27,7 +27,7 @@
                     <!-- Dashboards -->
                     <li *ngFor="let item of menuItems" class="navbar-vertical-aside-has-menu show">
                         <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle active" href="javascript:;" title="Dashboards">
-                            <i class="tio-home-vs-1-outlined nav-icon"></i>
+                            <i class="{{item.icono}} nav-icon"></i>
                             <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">{{ item.titulo }}</span>
                         </a>
 

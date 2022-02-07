@@ -12,6 +12,10 @@ import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { PerfilComponent } from './perfil/perfil.component';
 
+//Mantenimientos
+import { UsuariosComponent } from './mantenimientos/usuarios/usuarios.component';
+
+
 export const routes: Routes = [
   {path: 'dashboard', component: PagesComponent,
     canActivate: [ AuthGuard ],
@@ -25,6 +29,10 @@ export const routes: Routes = [
     {path: 'perfil', component: PerfilComponent, data: { titulo: 'Perfil de usuario' } },
 
     //{path: '', redirectTo: '/dashboard', pathMatch: 'full'},
+
+    //Mantenimientos
+    {path: 'usuarios', component: UsuariosComponent, data: { titulo: 'Usuario de aplicacion' } },
+
     ]
   },
 
