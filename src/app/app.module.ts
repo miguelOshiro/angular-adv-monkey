@@ -8,12 +8,14 @@ import { AuthModule } from './auth/auth.module';
 import { AppComponent } from './app.component';
 
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
+//import { ImagenPipe } from './pipes/imagen.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NopagefoundComponent,
+    //ImagenPipe,
 
   ],
   imports: [
