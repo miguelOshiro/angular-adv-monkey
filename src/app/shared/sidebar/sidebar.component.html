@@ -25,14 +25,14 @@
             <div class="navbar-vertical-content">
                 <ul class="navbar-nav navbar-nav-lg nav-tabs">
                     <!-- Dashboards -->
-                    <li *ngFor="let item of menuItems" class="navbar-vertical-aside-has-menu show">
+                    <li *ngFor="let item of sidebarService.menu" class="navbar-vertical-aside-has-menu show">
                         <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle active" href="javascript:;" title="Dashboards">
-                            <i class="{{item.icono}} nav-icon"></i>
-                            <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">{{ item.titulo }}</span>
+                            <i class="{{ item['icono'] }} nav-icon"></i>
+                            <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">{{ item['titulo'] }}</span>
                         </a>
 
                         <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
-                            <li *ngFor="let subMenuItem of item.submenu" class="nav-item">
+                            <li *ngFor="let subMenuItem of (item['submenu'])" class="nav-item">
                                 <a class="nav-link active" [routerLink]="subMenuItem.url" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" title="Default">
                                     <span class="tio-circle nav-indicator-icon"></span>
                                     <span class="text-truncate">{{subMenuItem.titulo}}</span>

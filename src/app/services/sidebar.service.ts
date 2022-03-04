@@ -5,31 +5,36 @@ import { Injectable } from '@angular/core';
 })
 export class SidebarService {
 
-  menu: any[] =[
-    {
-      titulo: 'Dashboard!!!',
-      icono: 'tio-home-vs-1-outlined',
-      submenu: [
-        { titulo: 'Main', url: '/'},
-        { titulo: 'Graficas', url: 'grafica1'},
-        { titulo: 'Promesas', url: 'promesas'},
-        { titulo: 'ProgressBar', url: 'progress'},
-        { titulo: 'Rxjs', url: 'rxjs'},
-      ]
-    },
+  public menu = [];
 
-    {
-      titulo: 'Mantenimiento',
-      icono: 'tio-dashboard-vs-outlined',
-      submenu: [
-        { titulo: 'Usuarios', url: 'usuarios'},
-        { titulo: 'Hospitales', url: 'hospitales'},
-        { titulo: 'Medicos', url: 'medicos'},
-      ]
-    },
-  ];
+  cargarMenu() {
+    this.menu = JSON.parse(localStorage.getItem('menu')!) || [];
+  }
 
-  constructor() { }
+  // menu: any[] =[
+  //   {
+  //     titulo: 'Dashboard!!!',
+  //     icono: 'tio-home-vs-1-outlined',
+  //     submenu: [
+  //       { titulo: 'Main', url: '/'},
+  //       { titulo: 'Graficas', url: 'grafica1'},
+  //       { titulo: 'Promesas', url: 'promesas'},
+  //       { titulo: 'ProgressBar', url: 'progress'},
+  //       { titulo: 'Rxjs', url: 'rxjs'},
+  //     ]
+  //   },
+
+  //   {
+  //     titulo: 'Mantenimiento',
+  //     icono: 'tio-dashboard-vs-outlined',
+  //     submenu: [
+  //       { titulo: 'Usuarios', url: 'usuarios'},
+  //       { titulo: 'Hospitales', url: 'hospitales'},
+  //       { titulo: 'Medicos', url: 'medicos'},
+  //     ]
+  //   },
+  // ];
+
 }
 
 
